@@ -7,6 +7,9 @@ esbuild
     minify: true,
     sourcemap: true,
     watch: false,
+    define: {
+      "process.env.NODE_ENV": "'production'",
+    }
   })
   .then(() => console.log("⚡ Done"))
   .catch(() => process.exit(1));
